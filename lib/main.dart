@@ -21,9 +21,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "To-Do Provider App",
-      theme: ThemeData(primarySwatch: Colors.indigo),
+      theme: ThemeData(
+        primaryColor: Colors.indigo,
+        colorScheme: ColorScheme.light(
+          primary: Colors.indigo,
+          background: Colors.indigo.shade50,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
